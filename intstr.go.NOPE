@@ -1,0 +1,40 @@
+package pyfuncs
+
+import (
+	"fmt"
+	"imports/commontools"
+	"strconv"
+)
+
+// Int returns Int of string
+func Int(in interface{}) int {
+	Type := commontools.Type
+	if Type(in) == "string" {
+		return strconv.Atoi(in.(string))
+	}
+	if Type(in) == "float32" {
+		return int()
+	}
+	if Type(in) == "float64" {
+		return int()
+	}
+	panic("Dont know how to deal with this type:" + Type(in))
+
+}
+
+func F32toInt(i float32) int {
+	return int(i)
+}
+
+func F64toInt(i float64) int {
+	return int(i)
+}
+
+func StrtoInt(i string) int {
+
+}
+
+// Str returns %v as string of arg
+func Str(in interface{}) string {
+	return fmt.Sprintf("%v", in)
+}
